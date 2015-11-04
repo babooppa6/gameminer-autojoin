@@ -1,9 +1,10 @@
 # gameminer-autojoin
 
-A userscript to autojoin giveaways on gameminer
+**Get this extension at the chrome web store** https://chrome.google.com/webstore/detail/gameminernet-autojoin-bot/ehnlgmgdeiniedehbamagbfbljmhekdm
 
-**You can now find this extension at the chrome web store** https://chrome.google.com/webstore/detail/gameminernet-autojoin-bot/ehnlgmgdeiniedehbamagbfbljmhekdm
+New updates are only applied to the extension at chrome web store.
+Sorry for Firefox and Opera users, will make a port for those browsers if I find time.
 
-Or install it as userscript: https://raw.githubusercontent.com/Tackyou/gameminer-autojoin/master/gameminer.user.js
+If you have any suggestions just leave a feedback at chrome web store.
 
-If you have any suggestions just leave a feedback at chrome web store or contact me. Skype & Steam name are same as on Github.
+Source of the extensions will be added to this repo soon. Userscript version discontinued.
