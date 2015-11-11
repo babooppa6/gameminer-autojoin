@@ -6,5 +6,3 @@ New updates are only applied to the extension at chrome web store.
 Sorry for Firefox and Opera users, will make a port for those browsers if I find time.
 
 If you have any suggestions just leave a feedback at chrome web store.
-
-Source of the extensions will be added to this repo soon. Userscript version discontinued.
