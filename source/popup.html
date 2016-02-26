@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gameminer Bot</title>
+	<link rel="stylesheet" href="data/popup.css" type="text/css" />
+	<script src="data/jquery-1.7.1.min.js"></script>
+	<script src="data/popup.js"></script>
+</head>
+<body>
+	<header>
+		<div class="content">
+			<img src="images/logo.png" style="width:30%;margin-top:-5px">
+			<h2 style="float:right">Settings</h2>
+		</div>
+	</header>
+	<div class="content">
+		<div class="span6 text-center" id="actions">
+			<div class="fullwidth">
+				<!--<p style="margin-top: 0;">Receive notifications by email:</p>
+				<input id="email" type="text" placeholder="Type your email (required)" required>-->
+				<p style="margin-top: 15px; float:left">Customize scan delay (in minutes):</p>
+				<input id="gdelay" type="number" min="1" required>
+
+				<form id="formcheck">
+					<div class="col-4">
+						<input type="checkbox" id="genable" class="checkitem" name="actived" value="Bot enabled"><label for="genable">Bot enabled</label></input>
+						<input type="checkbox" id="gsgold" class="checkitem" name="actived" value="Enter gold giveaways"><label for="gsgold">Enter gold giveaways</label></input>
+					</div>
+					<div class="col-4">
+						<input type="checkbox" id="grfree" class="checkitem" name="actived" value="Enter region free only"><label for="grfree">Enter region free only</label></input>
+					</div>
+					<input style="opacity:0"></input>
+					<div class="feedback" id="feedback">Configuration saved!</div>
+					<div class="feedbackbad" id="feedbackbad">Error saving settings...</div>
+
+				</form>
+			</div>
+			<hr style="margin-top: 2px">
+		</div>
+		<div id="instructions">
+			<div class="fullwidth">
+				<h3 style="margin: 4px 0">INSTRUCTIONS <small><a href="#" id="show"><span id="message">show</span></a></small></h3>
+				<p>With this chrome extension you can automatically join giveaways on Gameminer.</p>
+				<ol>
+					<li>Go to <a href="http://gameminer.net/" target="_blank">gameminer.net</a> and log in with your Steam account.</li>
+					<li>Click on "Bot enabled" in this settings window and confirm with "Save".</li>
+					<li>Refresh the website and the bot will start running.</li>
+				</ol>
+				<p><b>Note:</b> You need to keep the website open in order to keep the bot running.</p>
+				<p>This might be changed in the future.</p>
+			</div>
+		</div>
+		<hr>
+		<p class="center">Rate this app: <a target="_blank" href="https://chrome.google.com/webstore/detail/gameminernet-autojoin-bot/ehnlgmgdeiniedehbamagbfbljmhekdm/reviews">Chrome Web Store</a></p>
+		<p class="center">Contact (STEAM): <a target="_blank" href="https://steamcommunity.com/id/tackyou">tackyou</a></p>
+	</div>
+</body>
+</html>
