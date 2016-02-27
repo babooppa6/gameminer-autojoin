@@ -1,7 +1,7 @@
 {
   "name": "Gameminer.net Autojoin Bot",
   "description": "This script will automatically join giveaways on gameminer.net",
-  "version": "1.2",
+  "version": "1.3",
   "author": "Tackyou",
   "permissions": [
     "*://gameminer.net/*",
@@ -10,15 +10,15 @@
     "storage"
   ],  
   "icons": {
-    "128": "images/icon128.png"
+    "128": "data/images/icon128.png"
   },
   "homepage_url": "https://github.com/Tackyou/gameminer-autojoin",
   "browser_action": {
     "default_title": "Gameminer Bot",
-    "default_popup": "popup.html"
+    "default_popup": "data/popup.html"
   },
   "background": {
-      "page": "popup.html"
+      "page": "data/popup.html"
   },
   "content_scripts": [
     {

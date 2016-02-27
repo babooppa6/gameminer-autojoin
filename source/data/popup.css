@@ -6,7 +6,7 @@ body {
     font-family: "Helvetica", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
-    height: 592px;
+    height: 448px;
 }
 a {
     color: #2A2725;
@@ -22,7 +22,6 @@ header {
 }
 .fullwidth {
     width: 100%;
-    padding: 20px 0;
 }
 .content {
     padding: 0 20px;
@@ -104,23 +103,21 @@ input[type="button"]:hover {
     background: #49afcd;
 }
 .feedback, .feedbackbad {
+    position:absolute;
+    width:298px;
+    margin-top:20px;
     height: 19px;
     color: white;
     border-radius: 3px;
     padding: 6px;
-    width: calc(100% - 12px);
     text-align: center;
-    opacity: 0;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
+    display:none;
 }
 .feedback {
     background: #79da14;
-    margin-top: 10px;
 }
 .feedbackbad {
     background: rgb(230,0,0);
-    margin-top: -31px;
 }
 ol {
     padding-right: 30px;
@@ -150,20 +147,17 @@ hr {
 }
 .center {
     text-align: center;
+    line-height:15px;
 }
 #instructions {
     height: 46px;
-    overflow: hidden;
-    -webkit-transition: height 1s;
-    transition: height 1s;
-    margin-bottom: 20px;
-}
-#actions {
-    height: 326px;
     width: 100%;
     overflow: hidden;
-    -webkit-transition: height 1s;
-    transition: height 1s;
+}
+#actions {
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
 }
 #show {
     background: #ccc;

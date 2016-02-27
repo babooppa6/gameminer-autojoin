@@ -1,18 +1,40 @@
 // gameminer bot by tackyou
 //
 // settings
-var gactive = false, gdelay = 15, gsgold = false, grfree = false;
+var gactive = false, gdelay = 15, gcoalmin = 0, gcoalmax = 100, ggoldmin = 0, ggoldmax = 100, gsgold = false, grfree = false;
 
 refreshSettings();
 function refreshSettings(){
-	chrome.storage.local.get('gameminerbot_enabled', function (result){
-		if(result.gameminerbot_enabled != undefined){
-			gactive = result.gameminerbot_enabled;
-		}
-	});
 	chrome.storage.local.get('gameminerbot_delay', function (result){
 		if(result.gameminerbot_delay != undefined){
 			gdelay = result.gameminerbot_delay;
+		}
+	});
+	//
+	chrome.storage.local.get('gameminerbot_coalmin', function (result){
+		if(result.gameminerbot_coalmin != undefined){
+			gcoalmin = result.gameminerbot_coalmin;
+		}
+	});
+	chrome.storage.local.get('gameminerbot_coalmax', function (result){
+		if(result.gameminerbot_coalmax != undefined){
+			gcoalmax = result.gameminerbot_coalmax;
+		}
+	});
+	chrome.storage.local.get('gameminerbot_goldmin', function (result){
+		if(result.gameminerbot_goldmin != undefined){
+			ggoldmin = result.gameminerbot_goldmin;
+		}
+	});
+	chrome.storage.local.get('gameminerbot_goldmax', function (result){
+		if(result.gameminerbot_goldmax != undefined){
+			ggoldmax = result.gameminerbot_goldmax;
+		}
+	});
+	//
+	chrome.storage.local.get('gameminerbot_enabled', function (result){
+		if(result.gameminerbot_enabled != undefined){
+			gactive = result.gameminerbot_enabled;
 		}
 	});
 	chrome.storage.local.get('gameminerbot_spendgold', function (result){
@@ -93,7 +115,7 @@ function JoinIfNotDLC(content, category){
 	var steamurl = $('.giveaway__topc a', content).attr('href'), steamappid = 0;
 	var regionlock = $("span[class*='regionlock']", content);
 	var regionlocked = regionlock != undefined && regionlock.length>0;
-	if(grfree && regionlocked){
+	if((grfree && regionlocked) || (category == 'golden' && (points > ggoldmax || points < ggoldmin)) || (category != 'golden' && (points > gcoalmax || points < gcoalmin))){
 		canJoin = false;
 	}else{
 		if(steamurl != undefined){
