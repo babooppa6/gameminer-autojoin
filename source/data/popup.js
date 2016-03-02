@@ -120,17 +120,17 @@ function setOptions(){
 	});
 	//
 	chrome.storage.local.get('gameminerbot_spendgold', function (result){
-		if(result.gameminerbot_delay != undefined){
+		if(result.gameminerbot_spendgold != undefined){
 			$('#gsgold').attr('checked', result.gameminerbot_spendgold);
 		}
 	});
 	chrome.storage.local.get('gameminerbot_enabled', function (result){
-		if(result.gameminerbot_delay != undefined){
+		if(result.gameminerbot_enabled != undefined){
 			$('#genable').attr('checked', result.gameminerbot_enabled);
 		}
 	});
 	chrome.storage.local.get('gameminerbot_regionfreeonly', function (result){
-		if(result.gameminerbot_delay != undefined){
+		if(result.gameminerbot_regionfreeonly != undefined){
 			$('#grfree').attr('checked', result.gameminerbot_regionfreeonly);
 		}
 	});
