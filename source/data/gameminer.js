@@ -1,7 +1,7 @@
 // gameminer bot by tackyou
 //
 // settings
-var gactive = false, gdelay = 15, gcoalmin = 0, gcoalmax = 100, ggoldmin = 0, ggoldmax = 100, gsgold = false, grfree = false;
+var gactive = false, gdelay = 15, gcoalmin = 0, gcoalmax = 100, ggoldmin = 0, ggoldmax = 100, gsgold = false, gregion = false, gafree = false;
 
 refreshSettings();
 function refreshSettings(){
@@ -44,7 +44,12 @@ function refreshSettings(){
 	});
 	chrome.storage.local.get('gameminerbot_regionfreeonly', function (result){
 		if(result.gameminerbot_regionfreeonly != undefined){
-			grfree = result.gameminerbot_regionfreeonly;
+			gregion = result.gameminerbot_regionfreeonly;
+		}
+	});
+	chrome.storage.local.get('gameminerbot_alwaysjoinfree', function (result){
+		if(result.gameminerbot_alwaysjoinfree != undefined){
+			gafree = result.gameminerbot_alwaysjoinfree;
 		}
 	});
 }
@@ -115,7 +120,7 @@ function JoinIfNotDLC(content, category){
 	var steamurl = $('.giveaway__topc a', content).attr('href'), steamappid = 0;
 	var regionlock = $("span[class*='regionlock']", content);
 	var regionlocked = regionlock != undefined && regionlock.length>0;
-	if((grfree && regionlocked) || (category == 'golden' && (points > ggoldmax || points < ggoldmin)) || (category != 'golden' && (points > gcoalmax || points < gcoalmin))){
+	if((gregion && regionlocked) || (category == 'golden' && (points > ggoldmax || points < ggoldmin) && !gafree) || (category != 'golden' && (points > gcoalmax || points < gcoalmin)&& !gafree)){
 		canJoin = false;
 	}else{
 		if(steamurl != undefined){

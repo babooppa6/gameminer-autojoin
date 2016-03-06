@@ -27,7 +27,7 @@
 						<input type="checkbox" id="gsgold" class="checkitem" name="actived" value="Enter gold giveaways"><label for="gsgold">Enter gold giveaways</label></input>
 					</div>
 					<div class="col-4">
-						<input type="checkbox" id="grfree" class="checkitem" name="actived" value="Enter region free only"><label for="grfree">Enter region free only</label></input>
+						<input type="checkbox" id="gregion" class="checkitem" name="actived" value="Enter region free only"><label for="gregion">Enter region free only</label></input>
 					</div>
 					<input style="opacity:0"></input>
 					<hr style="margin-top:-15px"><br>
@@ -42,6 +42,9 @@
 					<input style="float:left;" id="ggoldmin" type="number" min="0" max="1000" required>
 					<p style="margin-top: 15px;margin-left:5px;float:left">maximum:</p>
 					<input id="ggoldmax" type="number" min="0" max="1000" required>
+					<div class="col-4">
+						<input type="checkbox" id="gafree" class="checkitem" name="actived" value="Enter region free only"><label for="gafree" style="width:293px">Always join free giveaways (ignore minimum if fee is 0)</label></input>
+					</div>
 					<div class="feedback" id="feedback">Configuration saved!</div>
 					<div class="feedbackbad" id="feedbackbad">Error saving settings...</div>
 				</form>

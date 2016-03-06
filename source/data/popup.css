@@ -105,7 +105,7 @@ input[type="button"]:hover {
 .feedback, .feedbackbad {
     position:absolute;
     width:298px;
-    margin-top:20px;
+    margin-top:50px;
     height: 19px;
     color: white;
     border-radius: 3px;
@@ -155,7 +155,7 @@ hr {
     overflow: hidden;
 }
 #actions {
-    height: 280px;
+    height: 310px;
     width: 100%;
     overflow: hidden;
 }

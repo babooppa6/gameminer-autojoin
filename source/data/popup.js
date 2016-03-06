@@ -21,8 +21,14 @@ $(function(){
 		});
 	});
 
-	$("#grfree").click(function(){
+	$("#gregion").click(function(){
 		chrome.storage.local.set({'gameminerbot_regionfreeonly': $(this).is(':checked')}, function() { 
+			feedback("feedback");
+		});
+	});
+
+	$("#gafree").click(function(){
+		chrome.storage.local.set({'gameminerbot_alwaysjoinfree': $(this).is(':checked')}, function() { 
 			feedback("feedback");
 		});
 	});
@@ -131,7 +137,12 @@ function setOptions(){
 	});
 	chrome.storage.local.get('gameminerbot_regionfreeonly', function (result){
 		if(result.gameminerbot_regionfreeonly != undefined){
-			$('#grfree').attr('checked', result.gameminerbot_regionfreeonly);
+			$('#gregion').attr('checked', result.gameminerbot_regionfreeonly);
+		}
+	});
+	chrome.storage.local.get('gameminerbot_alwaysjoinfree', function (result){
+		if(result.gameminerbot_alwaysjoinfree != undefined){
+			$('#gafree').attr('checked', result.gameminerbot_alwaysjoinfree);
 		}
 	});
 }
